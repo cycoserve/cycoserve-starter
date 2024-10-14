@@ -1,7 +1,7 @@
 import RootLayout from "@/components/Layouts/RootLayout";
 import React from "react";
 import Blog from "@/components/content/Blog";
-import SectionWrap from "@/components/elements/SectionWrap";
+import SectionWrap from "@/components/Sections/SectionWrap";
 import MetaTags from "@/components/headers/MetaData";
 import BlogHero from "@/components/Sections/BlogHero";
 

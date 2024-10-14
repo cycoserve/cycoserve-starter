@@ -1,205 +1,82 @@
-import { motion } from "framer-motion";
-import RootLayout from "@/components/Layouts/RootLayout";
-import TwoColSection from "@/components/Sections/TwoColSection";
-import ThreeColSection from "@/components/Sections/ThreeColSection";
-import TitleSection from "@/components/Sections/TitleSection";
-import SwiperComponent from "@/components/Sections/BlogSwiperComponent";
-import PageEndHero from "@/components/elements/PageEndHero";
-import SectionWrap from "@/components/elements/SectionWrap";
-import TopBanner from "@/components/elements/TopBanner";
-import { NewsletterSignupComponent } from "@/components/newsletter-signup";
-import Spacer from "@/components/ui/Spacer";
-import MetaTags from "@/components/headers/MetaData";
-import HomeHero from "@/components/Sections/HomeHero";
-import CodeSnippet from "@/components/Sections/CodeSnipet";
-import BlogSwiperComponent from "@/components/Sections/BlogSwiperComponent";
-import { Button } from "@/components/ui/button"
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import Link from 'next/link'
+import Image from 'next/image'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Github, FileText, Newspaper, Twitter } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
-
-
-
-export default function Home() {
-  // Framer Motion animation variants
-  const fadeIn = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.8 } },
-  };
-
-  const zoomIn = {
-    hidden: { scale: 0.8, opacity: 0 },
-    visible: { scale: 1, opacity: 1, transition: { duration: 0.8 } },
-  };
-
+export default function Component() {
   return (
-    <>
-      <MetaTags
-        title="CycoServe Labs - AI/ML Powered Digital Agency"
-        description="CycoServe Labs is leading the way in open-source innovation, offering powerful tools for web development, AI, and data-driven technologies. Join us in making technology more accessible and open to innovators worldwide."
-        url="https://cycoserve.com/"
-        imageUrl="https://cycoserve.com/assets/images/og-image.jpg"
-      />
-
-      <RootLayout>
-        {/* Hero Section */}
-        <HomeHero />
-        <TopBanner />
-        <CodeSnippet />
-
-        {/* Top Banner */}
-        <motion.div
-          variants={fadeIn}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-
-        </motion.div>
-
-        {/* 2 Col Section */}
-        <div className="features-bg pt-16 pb-24 bg-black">
-          <SectionWrap>
-            <motion.div
-              variants={fadeIn}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              <TitleSection
-                subtitle=""
-                title="Where Professionalism Meets Generosity"
-              />
-            </motion.div>
-            <motion.div
-              variants={zoomIn}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-
-              <TwoColSection
-                title1="Streamlined Web Development"
-                description1="Rest assured with our professional approach using GitHub and CI/CD, safeguarding your code integrity and eliminating worries of loss."
-                image1="/assets/development.jpg"
-                title2="Generous Hosting Terms"
-                description2="Benefit from our cost-effective model - no hosting fees until your web app exceeds generous usage limits, ensuring scalability without lock-in."
-                image2="/assets/hosting.jpg"
-              />
-            </motion.div>
-          </SectionWrap>
-        </div>
-
-        {/* 3 Col Section */}
-        <div className="three bg-zinc-950 pt-16 pb-24">
-          <SectionWrap>
-            <motion.div
-              variants={fadeIn}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              <TitleSection
-                subtitle=""
-                title="Radio Management And Podcasting"
-              />
-            </motion.div>
-            <motion.div
-              variants={zoomIn}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              <ThreeColSection
-                title1="Unlimited Reach, Unlimited Audience"
-                description1="Expand your audience without limits with our radio stream hosting services. Enjoy unlimited listeners and bandwidth for seamless broadcasting."
-                image1="/images/dj-trump-1.webp"
-                title2="Effortlessly Managed Playback"
-                description2="Keep the music playing around the clock with our Auto DJ feature. Effortlessly manage your playlists and scheduling for uninterrupted entertainment."
-                image2="/images/trump-coder.webp"
-                title3="Podcast Hosting Made Easy"
-                description3="Dive into the world of podcasting with ease. Our hosting services extend to podcast hosting, empowering you to share your voice with the world."
-                image3="/assets/podcasting.jpg"
-              />
-            </motion.div>
-          </SectionWrap>
-        </div>
-
-        {/* Features Section */}
-        <div className="features-bg wrap min-h-full py-12">
-          <Spacer />
-          <SectionWrap>
-            <motion.div
-              variants={zoomIn}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              <div className="mx-auto md:px-0">
-
-                <TitleSection
-                  subtitle=""
-                  title="Helpful Articles To Increase Your Knowledge"
-                />
-
-              </div>
-            </motion.div>
-            <motion.div
-              variants={fadeIn}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              <BlogSwiperComponent />
-              <div className="flex justify-center items-center mx-auto">
-                <Button asChild className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full text-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105">
-                  <Link href="/blog">
-                    Read More Articles
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-              </div>
-            </motion.div>
-          </SectionWrap>
-        </div>
-
-
-        {/* Page End Hero */}
-        <motion.div
-          variants={zoomIn}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="max-w-7xl py-12 mx-auto"
-        >
-          <SectionWrap>
-            <PageEndHero
-              background=""
-              title="Transform Your Digital Presence"
-              description="We offer cutting edge digital services that will enhance your company's online presence. "
-              bptext="Download"
-              bpurl="https://github.com/cycoserve/CycoServe"
-              bstext="Guides"
-              bsurl="https://docs.cycoserve.com/"
+    <div className="min-h-screen bg-gradient-to-br from-black via-zinc-900 to-black text-gray-100 flex flex-col">
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+      <header className="relative z-10 p-4">
+        <div className="container mx-auto flex justify-between items-center">
+          <div className="w-10 h-10">
+            <Image
+              src="/logo.svg"
+              alt="CycoServe Icon"
+              width={40}
+              height={40}
+              className="rounded-full"
             />
-          </SectionWrap>
-        </motion.div>
+          </div>
+          <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-purple-500">
+            CycoServe<span className='text-white font-extralight'> Starter</span>
+          </h1>
+        </div>
+      </header>
 
-        {/* Newsletter Signup */}
-        <SectionWrap>
-          <motion.div
-            variants={fadeIn}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="max-w-7xl mx-auto"
-          >
-            <NewsletterSignupComponent />
-          </motion.div>
-        </SectionWrap>
+      <main className="relative z-10 flex-grow container mx-auto p-4">
+        <div className="text-center mb-12 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold mb-4">Rapidly Build Next.js Apps</h2>
+          <div className="relative text-xl text-gray-300 mb-4">
+            Jumpstart your development with CycoServe Starter - the ultimate Next js & WordPress framework for building lightning-fast applications.
+          </div>
+          <Link href={'/get-started'} >
+            <Button className='bg-gradient-to-r from-orange-500 to-purple-500  px-12 py-1 rounded-full font-bold text-lg text-white hover:bg-orange-400 hover:animate-pulse hover:transition-all hover:duration-300'>
+              Get Started</Button>
+          </Link>
 
-        <Spacer />
-      </RootLayout>
-    </>
-  );
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { title: "GitHub Repo", icon: Github, link: "https://github.com/cycoserve/cycoserve-starter", description: "Explore the source code and contribute to CycoServe Starter." },
+            { title: "Documentation", icon: FileText, link: "https://docs.cycoserve.com", description: "Read the comprehensive documentation for CycoServe Starter." },
+            { title: "Blog", icon: Newspaper, link: "https://cycoserve.com/blog", description: "Stay updated with the latest news and tutorials." },
+            { title: "Twitter", icon: Twitter, link: "https://twitter.com/cycoserve", description: "Follow us on Twitter for the latest updates and announcements." },
+          ].map((item, index) => (
+            <Card key={index} className="bg-zinc-800 bg-opacity-50 backdrop-filter backdrop-blur-lg border border-zinc-700 hover:border-orange-500 transition-all duration-300 flex flex-col h-full">
+              <CardHeader>
+                <CardTitle className="flex items-center text-orange-500">
+                  <item.icon className="mr-2" />
+                  {item.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="flex-grow">
+                <p className="text-gray-300">{item.description}</p>
+              </CardContent>
+              <CardFooter className="mt-auto">
+                <Link href={item.link} target='_blank' className="text-purple-400 hover:text-purple-300 transition-colors duration-200">
+                  Learn More
+                </Link>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+      </main>
+
+      <footer className="relative z-10 p-4">
+        <div className="container px-4 mx-auto flex justify-between items-center">
+          <p className="text-gray-400">© 2024 CycoServe Labs</p>
+          <div className="w-24 h-32 relative  top-0.5">
+            <Image
+              src="/logo-light.svg"
+              alt="CycoServe Logo"
+              layout='fill'
+              objectFit="contain"
+            />
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
 }

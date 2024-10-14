@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import Header from '../headers/Header';
 import Footer from '../footers/Footer';
 import LoadingSpinner from '@/components/elements/LoadingSpinner';
-import { CookieNotice } from '../cookie-notice';
+import { CookieNotice } from '../elements/cookie-notice';
 
 interface RootLayoutProps {
   children: ReactNode;

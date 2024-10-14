@@ -2,7 +2,7 @@ import React from "react";
 import { GetServerSideProps } from "next";
 import axios from "axios";
 import RootLayout from "@/components/Layouts/RootLayout";
-import SectionWrap from "@/components/elements/SectionWrap";
+import SectionWrap from "@/components/Sections/SectionWrap";
 import MetaTags from "@/components/headers/MetaData";
 
 
