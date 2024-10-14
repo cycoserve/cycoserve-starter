@@ -30,7 +30,7 @@ To get started with CycoServe, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/cycoserve/CycoServe.git
+   git clone https://github.com/cycoserve/cycoserve-starter.git
    ```
 
 2. Install dependencies:
@@ -45,7 +45,7 @@ To get started with CycoServe, follow these steps:
 
 4. Open your browser and navigate to `http://localhost:3000`.
 
-For a more detailed guide, check the **[QuickStart Guide](https://docs.cycoserve.com/readme/quickstart)** in our documentation.
+For a more detailed guide, check the **[QuickStart Guide](https://docs.cycoserve.com/quickstart)** in our documentation.
 
 ## Features
 
@@ -74,7 +74,7 @@ We welcome contributions from developers and tech enthusiasts. Here’s how you 
 4. Push your changes to the branch (`git push origin feature/your-feature`).
 5. Open a Pull Request.
 
-For more details on contributing, check out our [Contributing Guide](https://cycoserve.com/docs/contributing).
+For more details on contributing, check out our [Contributing Guide](https://cycoserve.com/docs/).
 
 ## License
 
