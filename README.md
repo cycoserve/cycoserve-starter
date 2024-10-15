@@ -82,5 +82,5 @@ This project is licensed under the MIT License. See the [LICENSE](https://github
 
 ---
 
-For more information, visit our official documentation website at [CycoServe Documentation](https://cycoserve.com/docs).
+For more information, visit our official documentation website at [CycoServe Documentation](https://docs.cycoserve.com).
 
